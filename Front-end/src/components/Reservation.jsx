@@ -1,6 +1,38 @@
-import React from 'react'
+import React, { useState } from 'react';
 
 const Reservation = () => {
+
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    phone: '',
+    people: '',
+    date: '',
+    message: '',
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form submitted:', formData);
+
+    setFormData({
+      fullName: '',
+      email: '',
+      phone: '',
+      people: '',
+      date: '',
+      message: '',
+    });
+  };
+
   return (
     <>
       <section id="mu-reservation">
@@ -21,14 +53,18 @@ const Reservation = () => {
                   </p>
                   <div className="col-md-6">
                     <div className="mu-reservation-left">
-                      <form className="mu-reservation-form">
+                      <form className="mu-reservation-form" onSubmit={handleSubmit}>
                         <div className="row">
                           <div className="col-md-12">
                             <div className="form-group">
                               <input
                                 type="text"
+                                name="fullName"
+                                value={formData.fullName}
+                                onChange={handleChange}
                                 className="form-control"
                                 placeholder="Full Name"
+                                required
                               />
                             </div>
                           </div>
@@ -36,8 +72,12 @@ const Reservation = () => {
                             <div className="form-group">
                               <input
                                 type="email"
+                                name="email"
+                                value={formData.email}
+                                onChange={handleChange}
                                 className="form-control"
                                 placeholder="Email"
+                                required
                               />
                             </div>
                           </div>
@@ -45,6 +85,9 @@ const Reservation = () => {
                             <div className="form-group">
                               <input
                                 type="text"
+                                name="phone"
+                                value={formData.phone}
+                                onChange={handleChange}
                                 className="form-control"
                                 placeholder="Phone Number"
                               />
@@ -52,8 +95,14 @@ const Reservation = () => {
                           </div>
                           <div className="col-md-12">
                             <div className="form-group">
-                              <select className="form-control">
-                                <option value={0}>How Many?</option>
+                              <select
+                                name="people"
+                                value={formData.people}
+                                onChange={handleChange}
+                                className="form-control"
+                                required
+                              >
+                                <option value="">How Many?</option>
                                 <option value="1 Person">1 Person</option>
                                 <option value="2 People">2 People</option>
                                 <option value="3 People">3 People</option>
@@ -71,8 +120,10 @@ const Reservation = () => {
                             <div className="form-group">
                               <input
                                 type="text"
+                                name="date"
+                                value={formData.date}
+                                onChange={handleChange}
                                 className="form-control"
-                                id="datepicker"
                                 placeholder="Date"
                               />
                             </div>
@@ -80,11 +131,13 @@ const Reservation = () => {
                           <div className="col-md-12">
                             <div className="form-group">
                               <textarea
+                                name="message"
+                                value={formData.message}
+                                onChange={handleChange}
                                 className="form-control"
                                 cols={30}
-                                rows={10}
+                                rows={5}
                                 placeholder="Your Message"
-                                defaultValue={""}
                               />
                             </div>
                           </div>
@@ -127,7 +180,7 @@ const Reservation = () => {
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default Reservation
+export default Reservation;
