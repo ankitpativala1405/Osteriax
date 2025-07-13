@@ -1000,7 +1000,7 @@ RESERVATION SECTION
 ====================*/
 
 #mu-client-testimonial {
-  background-image: url("assets/img/testimonial-bg.jpg");
+  background-image: url("../img/testimonial-bg.jpg");
   background-size: cover;
   background-attachment: fixed;
   display: inline;
@@ -1009,7 +1009,7 @@ RESERVATION SECTION
 }
 
 #mu-client-testimonial .mu-overlay {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.322);
   display: inline;
   float: left;
   padding: 70px 0 100px;
@@ -1050,7 +1050,6 @@ RESERVATION SECTION
   padding: 0 150px;
   position: relative;
   width: 100%;
-  background: #000;
 }
 
 .mu-testimonial-slider li .mu-testimonial-single .mu-testimonial-info {
