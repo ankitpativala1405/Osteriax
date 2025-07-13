@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { BookTableMethod } from '../method/BookTable.method';
 
 const Reservation = () => {
 
@@ -19,7 +20,7 @@ const Reservation = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
 
@@ -31,6 +32,10 @@ const Reservation = () => {
       date: '',
       message: '',
     });
+
+    const response = await BookTableMethod.PostData(formData)
+    const json = await response.json();
+    console.log(json);
   };
 
   return (
