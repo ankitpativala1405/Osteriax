@@ -69,3 +69,65 @@ button:focus-visible {
 
 
 /* @import "tailwindcss"; */
+
+
+.mu-chef-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.mu-single-chef {
+  text-align: center;
+  width: 250px;
+  overflow: hidden;
+  max-height: 350px;
+}
+
+.mu-single-chef-info h4 {
+  color: orange;
+  margin-top: 10px;
+}
+
+.mu-single-chef-social {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+  background-color: black;
+  padding: 20px 0;
+  opacity: 0;
+}
+
+.mu-single-chef:hover .mu-single-chef-social{
+   transform: translateY(-70px);
+   opacity: 1;
+   transition: all 0.5s ease-in-out;
+}
+/* .mu-single-chef-social:hover{
+  transform: translateY(-70px)
+} */
+
+.mu-single-chef-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid orange;
+  color: orange;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.mu-single-chef-social a:hover {
+  background: orange;
+  color: #000;
+}
+
+.mu-single-chef-social i {
+  font-size: 18px;
+}
