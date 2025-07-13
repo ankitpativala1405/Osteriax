@@ -63,7 +63,6 @@ const Chef = () => {
                 <Swiper
                   slidesPerView={4}
                   spaceBetween={30}
-                  navigation={true}
                   pagination={{ clickable: true }}
                   breakpoints={{
                     1024: { slidesPerView: 4 },
