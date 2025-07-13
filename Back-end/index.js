@@ -3,6 +3,7 @@ import dotenv from 'dotenv'
 import BookTablerouter from './router/BookTable.router.js'
 import cors from 'cors'
 import DbConnect from './config/DbConnect.js'
+import ContactRouter from './router/Contact.router.js'
 
 dotenv.config({
   path: "./.env"
@@ -14,6 +15,8 @@ app.use(express.json());
 app.use(cors())
 
 app.use("/tabledata", BookTablerouter)
+app.use("/contact", ContactRouter);
+
 
 const PORT = process.env.PORT
 
