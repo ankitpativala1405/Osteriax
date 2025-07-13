@@ -1,4 +1,15 @@
 import React from 'react'
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+// import './styles.css';
+
+// import required modules
+import { Pagination } from 'swiper/modules';
 
 const Testimonial = () => {
   return (
@@ -14,24 +25,71 @@ const Testimonial = () => {
                     <h2>What Customers Say</h2>
                   </div>
                   <div className="mu-testimonial-content">
-                    <ul className="mu-testimonial-slider">
-                      <li>
-                        <div className="mu-testimonial-single">
-                          <div className="mu-testimonial-info">
-                            <p>
-                              Lorem ipsum dolor sit amet, consectetur adipisicing
-                              elit. Cupiditate consequuntur ducimus cumque iure modi
-                              nesciunt recusandae eligendi vitae voluptatibus,
-                              voluptatum tempore, ipsum nisi perspiciatis. Rerum
-                              nesciunt fuga ab natus, dolorem?
-                            </p>
+
+
+                    <Swiper
+                      spaceBetween={30}
+                      pagination={{
+                        clickable: true,
+                      }}
+                      modules={[Pagination]}
+                      className="mySwiper mu-testimonial-slider"
+                    >
+                      <SwiperSlide>
+                        <li>
+                          <div className="mu-testimonial-single">
+                            <div className="mu-testimonial-info">
+                              <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing
+                                elit. Cupiditate consequuntur ducimus cumque iure modi
+                                nesciunt recusandae eligendi vitae voluptatibus,
+                                voluptatum tempore, ipsum nisi perspiciatis. Rerum
+                                nesciunt fuga ab natus, dolorem?
+                              </p>
+                            </div>
+                            <div className="mu-testimonial-bio">
+                              <p>- David Muller</p>
+                            </div>
                           </div>
-                          <div className="mu-testimonial-bio">
-                            <p>- David Muller</p>
+                        </li>
+                      </SwiperSlide>
+                      <SwiperSlide>
+                        <li>
+                          <div className="mu-testimonial-single">
+                            <div className="mu-testimonial-info">
+                              <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing
+                                elit. Cupiditate consequuntur ducimus cumque iure modi
+                                nesciunt recusandae eligendi vitae voluptatibus,
+                                voluptatum tempore, ipsum nisi perspiciatis. Rerum
+                                nesciunt fuga ab natus, dolorem?
+                              </p>
+                            </div>
+                            <div className="mu-testimonial-bio">
+                              <p>- David Muller</p>
+                            </div>
                           </div>
-                        </div>
-                      </li>
-                    </ul>
+                        </li>
+                      </SwiperSlide>
+                      <SwiperSlide>
+                        <li>
+                          <div className="mu-testimonial-single">
+                            <div className="mu-testimonial-info">
+                              <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing
+                                elit. Cupiditate consequuntur ducimus cumque iure modi
+                                nesciunt recusandae eligendi vitae voluptatibus,
+                                voluptatum tempore, ipsum nisi perspiciatis. Rerum
+                                nesciunt fuga ab natus, dolorem?
+                              </p>
+                            </div>
+                            <div className="mu-testimonial-bio">
+                              <p>- David Muller</p>
+                            </div>
+                          </div>
+                        </li>
+                      </SwiperSlide>
+                    </Swiper>
                   </div>
                 </div>
               </div>
