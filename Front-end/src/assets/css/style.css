@@ -1050,6 +1050,7 @@ RESERVATION SECTION
   padding: 0 150px;
   position: relative;
   width: 100%;
+  background: #000;
 }
 
 .mu-testimonial-slider li .mu-testimonial-single .mu-testimonial-info {

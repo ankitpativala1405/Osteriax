@@ -13,9 +13,8 @@ const Testimonial = () => {
                     <span className="mu-subtitle">Testimonials</span>
                     <h2>What Customers Say</h2>
                   </div>
-                  {/* testimonial content */}
                   <div className="mu-testimonial-content">
-                    {/* testimonial slider */}
+
                     <ul className="mu-testimonial-slider">
                       <li>
                         <div className="mu-testimonial-single">
