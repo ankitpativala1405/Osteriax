@@ -1,11 +1,22 @@
-import React from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/effect-fade';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { EffectFade, Navigation, Pagination } from 'swiper/modules';
 
-const HeroSlider = () => {
+ function HeroSlider() {
   return (
-    <>
-      <section id="mu-slider">
-        <div className="mu-slider-area">
-          <div className="mu-top-slider">
+    <section id="mu-slider">
+      <div className="mu-slider-area">
+        <Swiper
+          spaceBetween={30}
+          effect={'fade'}
+          pagination={{ clickable: true }}
+          modules={[EffectFade, Navigation, Pagination]}
+          className="mu-top-slider"
+        >
+          <SwiperSlide>
             <div className="mu-top-slider-single">
               <img src="Images/slider/1.jpeg" alt="img" />
               <div className="mu-top-slider-content">
@@ -23,6 +34,9 @@ const HeroSlider = () => {
                 </a>
               </div>
             </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
             <div className="mu-top-slider-single">
               <img src="Images/slider/2.jpeg" alt="img" />
               <div className="mu-top-slider-content">
@@ -40,6 +54,9 @@ const HeroSlider = () => {
                 </a>
               </div>
             </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
             <div className="mu-top-slider-single">
               <img src="Images/slider/3.jpeg" alt="img" />
               <div className="mu-top-slider-content">
@@ -57,12 +74,12 @@ const HeroSlider = () => {
                 </a>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-    </>
-  )
+          </SwiperSlide>
+        </Swiper>
+      </div>
+    </section>
+  );
 }
+
 
 export default HeroSlider
